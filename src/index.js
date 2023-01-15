@@ -1,17 +1,40 @@
-
-import React from 'react';
 import { createRoot} from 'react-dom/client';
 
-// import ReactDOM from 'react-dom';
+import data from './user.json' 
 
-const elem1 = React.createElement('span', {children: 'Hello'});
-const elem2 = React.createElement('span', {children: 'World'});
+const user = data[0];
 
-const element = React.createElement('div', { a: 5, b: 10, children: [elem1, ' ', elem2]});
-console.log(element);
+// const element = (
+// <div class="profile">
+//   <div class="description">
+//     <img 
+//       src={user.avatar}
+//       alt="User avatar"
+//       class="avatar"
+//       width="240"
+//     />
+//     <p class="name">{user.username}</p>
+//     <p class="tag">@{user.tag}</p>
+//     <p class="location">{user.location}</p> </div>
 
-// ReactDOM.render(element, document.querySelector('#root'));
-
+//     <ul class="stats">
+//     <li>
+//       <span class="label">Followers</span>
+//       <span class="quantity">{user.stats.followers}</span>
+//     </li>
+//     <li>
+//       <span class="label">Views</span>
+//       <span class="quantity">{user.stats.views}</span>
+//     </li>
+//     <li>
+//       <span class="label">Likes</span>
+//       <span class="quantity">{user.stats.likes}</span>
+//     </li>
+//   </ul>
+// </div>
+  
+  
+//   )
 
 const container = document.querySelector('#root');
 const root = createRoot(container);
