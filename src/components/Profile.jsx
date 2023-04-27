@@ -1,4 +1,14 @@
-export default function Profile ({url="https://cdn-icons-png.flaticon.com/512/1077/1077012.png", name, tag, location, followers, views, likes}) {
+import PropTypes from 'prop-types';
+
+export default function Profile ({
+  url="https://cdn-icons-png.flaticon.com/512/1077/1077012.png", 
+  name, 
+  tag, 
+  location, 
+  followers, 
+  views, 
+  likes}) 
+  {
     // const {url, name, tag, location, followers, views, likes} = props;
 
     return (
@@ -31,3 +41,13 @@ export default function Profile ({url="https://cdn-icons-png.flaticon.com/512/10
   </div>
   );
 };
+
+Profile.propTypes = {
+  url: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired, 
+  location: PropTypes.string.isRequired,
+  followers: PropTypes.number.isRequired,
+  views: PropTypes.number.isRequired,
+  likes: PropTypes.number.isRequired
+}
