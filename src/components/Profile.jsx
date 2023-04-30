@@ -1,4 +1,11 @@
 import PropTypes from 'prop-types';
+import {ProfileBox} from './Profile.styled'
+import {Name} from './Profile.styled'
+import {Tag} from './Profile.styled'
+import {Location} from './Profile.styled'
+import {Avatar} from './Profile.styled'
+import {Social} from './Profile.styled'
+import {SocialData} from './Profile.styled'
 
 export default function Profile ({
   url="https://cdn-icons-png.flaticon.com/512/1077/1077012.png", 
@@ -12,33 +19,33 @@ export default function Profile ({
     // const {url, name, tag, location, followers, views, likes} = props;
 
     return (
+    <ProfileBox>
     <div>
-    <div>
-      <img
+      <Avatar
         src={url}
         alt="User avatar"
         width="240"
       />
-      <p>{name}</p>
-      <p>@{tag}</p>
-      <p>{location}</p>
+      <Name>{name}</Name>
+      <Tag>@{tag}</Tag>
+      <Location>{location}</Location>
     </div>
   
-    <ul>
-      <li>
+    <Social>
+      <SocialData>
         <span>Followers</span>
         <span> {followers}</span>
-      </li>
-      <li>
+      </SocialData>
+      <SocialData>
         <span>Views</span>
         <span> {views}</span>
-      </li>
-      <li>
+      </SocialData>
+      <SocialData>
         <span>Likes</span>
         <span> {likes}</span>
-      </li>
-    </ul>
-  </div>
+      </SocialData>
+    </Social>
+  </ProfileBox>
   );
 };
 

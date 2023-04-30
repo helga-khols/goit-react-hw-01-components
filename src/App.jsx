@@ -6,9 +6,12 @@ import user from './user';
 import items from './friends';
 import data from "./data";
 import transactionsData from './transactions 2'
+import {Container} from './App.styled'
+
+
 
 export default function App() {
-    return <div>
+    return <Container>
         <Profile 
         url={user.avatar} 
         name={user.username} 
@@ -24,5 +27,5 @@ export default function App() {
 
         <TransactionList transactions={transactionsData}/>
         
-    </div>
+    </Container>
 }
